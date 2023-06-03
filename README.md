@@ -5,7 +5,7 @@ Av2 Trabalho de Mobile. Alunos: Carlos eduardo Cabral de Melo Neto; Isabelle de 
 
 Este é um aplicativo de fitness desenvolvido em React Native. O aplicativo permite aos usuários acompanhar suas atividades físicas, definir metas e acessar planos de treinamento personalizados.
 
-![Captura de tela do Aplicativo](screenshot.png)
+
 
 ## Funcionalidades
 
