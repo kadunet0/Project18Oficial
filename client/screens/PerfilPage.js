@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 const PerfilPage = () => {
   const perfilCliente = {
-    nome: 'Laura Caixão',
+    nome: 'Carlos Cabral',
     id: 'ID 724617',
-    idade: 25,
+    idade: 20,
     endereco: 'Oasis Springs Rua Rattlesnake Juice 212',
     telefone: '(81) 986835312',
     descricao: 'Uma breve descrição sobre o cliente...',
@@ -32,16 +36,51 @@ const PerfilPage = () => {
       </View>
 
       {menuVisible && (
-        <View style={styles.menuContainer}>
+        <View style={styles.menu}>
           {/* Aqui você pode adicionar os itens do menu */}
-          <TouchableOpacity>
-            <Text style={styles.menuItem}>Opção 1</Text>
+          <TouchableOpacity style={styles.menuItem}>
+            <FontAwesome name="user-circle-o" size={22} color="#FDFDFD" />
+            <Text style={styles.menuItemText}>Dados pessoais</Text>
           </TouchableOpacity>
-          <TouchableOpacity>
-            <Text style={styles.menuItem}>Opção 2</Text>
+          <TouchableOpacity style={styles.menuItem}>
+            <Ionicons name="ios-document-text-outline" size={22} color="#FDFDFD" />
+            <Text style={styles.menuItemText}>Planos/Serviços</Text>
           </TouchableOpacity>
-          <TouchableOpacity>
-            <Text style={styles.menuItem}>Opção 3</Text>
+          <TouchableOpacity style={styles.menuItem}>
+            <Ionicons name="folder-outline" size={22} color="#FDFDFD" />
+            <Text style={styles.menuItemText}>Termos e Documentos</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.menuItem}>
+            <AntDesign name="warning" size={22} color="#FDFDFD" />
+            <Text style={styles.menuItemText}>Bloqueios e pendências</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.menuItem}>
+            <Ionicons name="notifications" size={22} color="#FDFDFD" />
+            <Text style={styles.menuItemText}>Notificações</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.menuItem}>
+            <AntDesign name="addusergroup" size={22} color="#FDFDFD" />
+            <Text style={styles.menuItemText}>Convide seus amigos</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.menuItem}>
+            <MaterialIcons name="payment" size={22} color="#FDFDFD" />
+            <Text style={styles.menuItemText}>Carteira</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.menuItem}>
+            <FontAwesome5 name="coins" size={18} color="#FDFDFD" />
+            <Text style={styles.menuItemText}>Histórico de Pagamentos</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.menuItem}>
+            <AntDesign name="shoppingcart" size={22} color="#FDFDFD" />
+            <Text style={styles.menuItemText}>Comprar</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.menuItem}>
+            <FontAwesome name="gear" size={22} color="#FDFDFD" />
+            <Text style={styles.menuItemText}>Configurações</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.menuItem}>
+            <AntDesign name="arrowleft" size={22} color="#FDFDFD" />
+            <Text style={styles.menuItemText}>Sair do App</Text>
           </TouchableOpacity>
         </View>
       )}
@@ -90,14 +129,19 @@ const PerfilPage = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+    paddingHorizontal: 1,
+    paddingTop: 0,
     backgroundColor: '#262626',
-    width:'100%',
+    width: '100%',
   },
   navbar: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: '#1C1C1C',
+    width: '100%',
+    backgroundColor: '#050505',
     paddingVertical: 20,
     paddingHorizontal: 20,
     marginTop: 25,
@@ -111,19 +155,29 @@ const styles = StyleSheet.create({
   icon: {
     marginRight: 10,
   },
-  menuContainer: {
+  menu: {
     position: 'absolute',
-    top: 100,
-    right: 20,
-    backgroundColor: '#1C1C1C',
+    top: 70,
+    left: 0, // Alterado para "left"
+    backgroundColor: '#050505',
     borderRadius: 8,
-    padding: 10,
+    padding: 20,
     elevation: 2,
+    zIndex: 999,
+    width: '100%',
   },
   menuItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
     fontSize: 16,
     color: '#FDFDFD',
-    paddingVertical: 5,
+    paddingVertical: 10,
+    borderBottomWidth: 1,  // Adiciona uma linha na parte inferior
+    borderBottomColor: '#222222',  // Define a cor da linha
+  },
+  menuItemText: { // Adicionado o estilo para o texto do menu
+    marginLeft: 10, // Adicionado margem à esquerda para separar o texto do ícone
+    color: '#FDFDFD',
   },
   scrollContainer: {
     flexGrow: 1,
@@ -204,7 +258,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 2,
-    width: '77%',
+    width: '98%',
   },
   historyDate: {
     fontSize: 14,
