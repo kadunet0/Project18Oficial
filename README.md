@@ -1,5 +1,5 @@
 # Project18Oficial
-Av2 Trabalho de Mobile. Alunos: Carlos eduardo Cabral de Melo Neto; Isabelle de Jesus Simões Ferreira; Larissa Vitória Andrade de Araujo 
+Av2 Trabalho de Mobile. Alunos: Carlos eduardo Cabral de Melo Neto(01534117); Isabelle de Jesus Simões Ferreira(01533745); Larissa Vitória Andrade de Araujo(01564988) 
 
 # Aplicativo de Fitness
 
